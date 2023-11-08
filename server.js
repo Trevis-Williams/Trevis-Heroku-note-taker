@@ -3,7 +3,7 @@ const fs = require('fs');
 const { v4: uuidv4 } = require('uuid'); // Use the uuid package for generating unique IDs
 const path = require('path')
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json()); // Parse JSON request bodies
 app.use(express.static("public"))
